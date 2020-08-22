@@ -10,7 +10,6 @@ import time
 import random
 
 user_agent = "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16"
-ROOT_DIR = "c:\\Users\\Rajdeep\\Desktop\\Projects\\Instagram Meme Page Automation BOT\\memes\\"
 profile = webdriver.FirefoxProfile()
 profile.set_preference("general.useragent.override", user_agent)
 driver = webdriver.Firefox(profile)
@@ -51,7 +50,7 @@ class Insta:
 
     def post(self, PostInfo):
 
-        filename = ROOT_DIR + PostInfo['Title']+getExtention(PostInfo['Url'])
+        filename = PostInfo['PATH']
 
         if os.path.exists(filename):
             try:
@@ -110,7 +109,3 @@ class Insta:
 
     def exi(self):
         driver.quit()
-
-
-def getExtention(PostLink):
-    return "."+PostLink.split(".")[-1]
