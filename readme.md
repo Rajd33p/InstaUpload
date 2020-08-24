@@ -1,3 +1,5 @@
+pip install selenium , pyautogui
+
 Postinfo structure
 
 ```json
@@ -7,5 +9,7 @@ Postinfo structure
   "PostLink": "Credits link"
 }
 ```
+Pass This json as a dictionary to 
 
-pip install selenium , pyautogui
+Object.post(json)
+
