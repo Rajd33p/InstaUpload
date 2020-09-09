@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 # InstaUpload
-=======
-pip install selenium , pyautogui
-
-Postinfo structure
->>>>>>> 87157fcf8f647362948f5cadb995e2b891dba4bb
 
 This Module Or Library can upload to your Instagram profile
 
@@ -40,15 +34,9 @@ user.post(data) #Calling the post function
 user.exi() #exit the Browser
 
 ```
-Pass This json as a dictionary to 
 
-Object.post(json)
-
-<<<<<<< HEAD
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-=======
->>>>>>> 87157fcf8f647362948f5cadb995e2b891dba4bb
