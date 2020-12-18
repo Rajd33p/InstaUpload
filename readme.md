@@ -4,7 +4,7 @@ This Module Or Library can upload to your Instagram profile
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install
 
 ```bash
 pip install selenium , pyautogui
