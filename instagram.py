@@ -38,7 +38,7 @@ class Insta:
             driver.execute_script(
                 'document.getElementsByClassName("sqdOP  L3NKy   y3zKF")[1].removeAttribute("disabled");')
             driver.find_elements_by_xpath(
-                "/html/body/div[1]/section/main/article/div/div/div/form/div[1]/div[6]/button")[0].click()
+                "/html/body/div[1]/section/main/div[1]/div/div/div/form/div[1]/div[6]/button")[0].click()
 
             WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located(
                 (By.XPATH, "//*[contains(text(), 'Not Now')]")))
