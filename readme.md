@@ -1,5 +1,6 @@
 # Working as of 20/12/2020
 
+[![CodeFactor](https://www.codefactor.io/repository/github/rajd33p/instaupload/badge)](https://www.codefactor.io/repository/github/rajd33p/instaupload)
 # InstaUpload
 
 This Module Or Library can upload to your Instagram profile
