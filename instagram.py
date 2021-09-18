@@ -3,11 +3,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import string
+import ctypes
 import os
-import pyautogui
+#import pyautogui
 import time
-import random
 
 user_agent = "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16"
 profile = webdriver.FirefoxProfile()
@@ -38,7 +37,8 @@ class Insta:
             driver.execute_script(
                 'document.getElementsByClassName("sqdOP  L3NKy   y3zKF")[1].removeAttribute("disabled");')
             driver.find_elements_by_xpath(
-                "/html/body/div[1]/section/main/article/div/div/div/form/div[1]/div[6]/button")[0].click()
+                "/html/body/div[1]/section/main/div[1]/div/div/div/form/div[1]/div[6]/button")[0].click()
+                
 
             WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located(
                 (By.XPATH, "//*[contains(text(), 'Not Now')]")))
@@ -68,7 +68,9 @@ class Insta:
                     ImageLoad = driver.find_element_by_css_selector(
                         "input[type='file']")
                     ImageLoad.send_keys(filename)
-                    pyautogui.press('esc')
+                    ctypes.windll.user32.keybd_event(0x1b,0,0x0000,0)
+                    ctypes.windll.user32.keybd_event(0x1b,0,0x0002,0)
+                    #pyautogui.press('esc')
                 except:
                     return
 
@@ -99,7 +101,8 @@ class Insta:
                         caption = driver.find_element_by_tag_name('textarea')
                       #  time.sleep(2)
                         caption.send_keys(PostInfo['Title'])
-                        pyautogui.press('enter')
+                        ctypes.windll.user32.keybd_event(0x0D,0,0x0000,0)
+                        ctypes.windll.user32.keybd_event(0x0D,0,0x0002,0)
                         caption.send_keys("Credits : "+PostInfo['PostLink'])
 
                         button = driver.find_elements_by_class_name(

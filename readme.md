@@ -1,3 +1,5 @@
+# Working as of 20/12/2020
+
 # InstaUpload
 
 This Module Or Library can upload to your Instagram profile
@@ -7,7 +9,7 @@ This Module Or Library can upload to your Instagram profile
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
-pip install selenium , pyautogui
+pip install selenium 
 ```
 
 ## Usage
@@ -21,7 +23,7 @@ password = "" #Instagram's password
 user = Insta(username, password) # Create a object of the class
 
 
-user.Login() #calling the Login method from the calss
+user.Login() #calling the Login method from the class
 
 data = {
     "PATH": "Path(user double slashes like c:\\Desktop\\something)",
@@ -35,8 +37,6 @@ user.exi() #exit the Browser
 
 ```
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+## Todo
+- [x] remove pyautogui with some light weight alternative
+- [x] Code optimization
